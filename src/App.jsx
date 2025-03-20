@@ -1,57 +1,11 @@
-import React, { useState } from "react";
-import "./App.css";
-import Dish from "./Dish.jsx";
+import React from "react";
+import "./style/App.css";
+import Navigation from "./components/Navigation.jsx";
 
 const App = () => {
-  const dishes = [
-    {
-      name: "Фунчоза",
-      img: "/noodles.jpg",
-    },
-    {
-      name: "Отбивные с грибами",
-      img: "/meat.jpg",
-    },
-    {
-      name: "Брокколи с курицей",
-      img: "/broccoli.jpg",
-    },
-    {
-      name: 'Салат "Цезарь"',
-      img: "/caesar.jpg",
-    },
-    {
-      name: "Энчилады по-мексикански",
-      img: "/enchilada.jpg",
-    },
-    {
-      name: "Салат с курицей и ананасом",
-      img: "/pineapple-salad.jpg",
-    },
-    {
-      name: "Творожные вафли",
-      img: "/waffles.jpg",
-    },
-    {
-      name: "Куриные крылышки в соусе барбекю",
-      img: "/wings.jpg",
-    },
-  ];
-
-  const [randomDish, setRandomDish] = useState(dishes[0]);
-
-  const onClickRandom = () => {
-    const index = Math.floor(Math.random() * dishes.length);
-    setRandomDish(dishes[index]);
-  };
-
   return (
     <>
-      <h1>Food Journal</h1>
-      <Dish name={randomDish.name} dishImg={randomDish.img} />
-      <button onClick={onClickRandom} className="randomize">
-        Random
-      </button>
+      <Navigation />
     </>
   );
 };

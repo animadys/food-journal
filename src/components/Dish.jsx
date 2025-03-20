@@ -1,9 +1,9 @@
 import React from "react";
-import "./Dish.css";
+import "../style/Dish.css";
 
-const Dish = ({ name, dishImg }) => {
+const Dish = ({ name, dishImg, dishClass }) => {
   return (
-    <div className="dish-card">
+    <div className={dishClass}>
       <h2 className="dish-name">{name}</h2>
       <img src={dishImg} className="dish-img" alt="" />
     </div>

@@ -1,7 +1,13 @@
+.main-dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .dish-card {
-  container-type: size;
+  container-type: inline-size;
   width: clamp(300px, 80vw, 700px);
-  height: clamp(300px, 80vw, 700px);
+  aspect-ratio: 1/1;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /*Гарантируем, что изображение и текст распределены*/
@@ -9,15 +15,13 @@
   text-align: center;
   overflow: hidden; /* Избегаем выхода элементов за границы */
   border: 0.2rem solid #000;
-  padding: 1rem;
+  /* padding: 1rem; */
+  padding-top: 0;
 }
 
 @supports (font-size: 10cqi) {
   .dish-name {
     font-size: 7cqi; /*8% ширины контейнера*/
-    /* font-size: clamp(1rem, 8cqh, 2.5rem);
-     */
-    /* font-size: min(6cqi, 2rem); */
   }
 }
 

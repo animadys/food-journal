@@ -1,0 +1,39 @@
+.dish-list-container {
+  display: grid;
+  place-content: center; /* Центрируем `.dish-list` по горизонтали */
+  width: 100%;
+}
+
+.dish-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(145px, min(39vw, 345px))
+  ); /* Адаптивные колонки*/
+  gap: min(2vw, 10px);
+  width: min(80vw, 1055px);
+  justify-content: center;
+}
+
+.dish-card-small {
+  container-type: inline-size;
+  width: clamp(145px, 39vw, 345px);
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*Гарантируем, что изображение и текст распределены*/
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* Избегаем выхода элементов за границы */
+  border: 0.2rem solid #000;
+  /* padding: 1rem; */
+
+  flex: 1 1 auto;
+  max-width: 345px;
+}
+
+/* display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: min(2vw, 10px);
+  width: clamp(300px, 80vw, 1055px); */
